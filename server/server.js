@@ -7,7 +7,7 @@ app. use(cors());
 app.use(express.json());
 
 //middleware
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 
 //endpoint which I dont need since im using middleware
