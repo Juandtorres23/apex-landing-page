@@ -7,13 +7,13 @@ app. use(cors());
 app.use(express.json());
 
 //middleware
+app.use(express.static(path.join(__dirname, "/public")));
 
 
-
-
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-});
+//endpoint which I dont need since im using middleware
+// app.get("/", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/index.html"));
+// });
 
 const port = process.env.PORT || 4005;
 
